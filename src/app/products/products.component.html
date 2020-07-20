@@ -1,0 +1,58 @@
+<div id="holder">
+
+    <header class="header">
+        <nav>
+            <div class="app-logo"><p>longrich</p></div>
+            <div class="nav-list">
+                <ul class="mobile-first" *ngIf="listShow">
+                    <li><a routerLink="/">products</a>
+                        <i class="fa fa-angle-right" *ngIf="rightCondition" (click)="onGreater()"></i>
+                        <i class="fa fa-angle-down" *ngIf="downCondition" (click)="onDowner()"></i>
+                       <ul *ngIf="innerList">
+                           <li><section (click)="filterBy='all'"><p>all products</p></section></li>
+                           <li><section (click)="filterBy='family'"> <p>family care</p></section></li>
+                           <li><section (click)="filterBy='health'"><p>health care</p></section></li>
+                           <li><section (click)="filterBy='personal'"><p>home care</p> </section></li>
+                           <li><section (click)="filterBy='home'"> <p>personal care</p></section></li>
+                       </ul>
+                    </li>
+                    <li><a routerLink="about">about us</a></li>
+                    <li><a routerLink="contact">contact us</a></li>
+                </ul>
+                <ul class="then-desktop">
+                    <li class="floater"><a routerLink="/">products</a>
+                        <ul>
+                            <li><section (click)="filterBy='all'"><p>all products</p></section></li>
+                            <li><section (click)="filterBy='family'"> <p>family care</p></section></li>
+                            <li><section (click)="filterBy='health'"><p>health care</p></section></li>
+                            <li><section (click)="filterBy='personal'"><p>home care</p> </section></li>
+                            <li><section (click)="filterBy='home'"> <p>personal care</p></section></li>
+                        </ul>
+                    </li>
+                    <li class="floater"><a routerLink="about">about us</a></li>
+                    <li class="floater"><a routerLink="contact">contact us</a></li>
+                </ul>
+                <i class="fa fa-bars" (click)="onBarsClick()" *ngIf="barsCondition"></i>
+                <i class="fa fa-times" (click)="onTimesClick()" *ngIf="timesCondition"></i>
+            </div> 
+        </nav>
+    </header>
+<div class="clearfix-padding"></div>
+    <main>
+    <section class="grid-container">
+        <div *ngFor="let view of (products | productFilterPipe:filterBy)" class="products-container"  (click)="onClick(view.id)">
+           <h2>{{view.productName}}</h2>
+           <img src={{view.productImage}} alt="a longrich product image">
+          <ul>
+             <li>{{view.productDescriptionOne}}</li>
+             <li>{{view.productDescriptionTwo}}</li>
+             <li>{{view.productDescriptionThree}}</li>
+          </ul> 
+           <div class="buttons-row">
+               <button class="btn">view more</button>
+               <button class="btn" (click)="contactReDirect()">buy now</button>
+           </div> 
+        </div>
+   </section> 
+    </main>
+</div>

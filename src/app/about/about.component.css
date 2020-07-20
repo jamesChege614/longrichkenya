@@ -1,0 +1,74 @@
+#holder{ /* #100b00 #85cb33 #efffc8  #3b341f */
+    max-width:1200px;
+    margin:0 auto;
+    background-color: #fdf7f4;
+     }
+h1{      
+    font-size: 40px;
+    font-family: 'rock salt', pacifico, cursive;
+    padding: 70px 5px 40px 10px;
+    color: #f37a5a;
+    text-align: center;
+    text-transform: capitalize;
+}
+h2{
+    text-transform: capitalize;
+    font-size: 26px;
+    margin: 15px 50px; 
+    padding-left: 100px; 
+    font-style: italic;
+}
+p{
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px 70px;
+    text-indent: 50px; 
+}
+.services h2{
+    text-align: center; 
+    padding: 0;
+    font-size: 29px;
+}
+.services .product-services{
+display: grid;
+grid-template-columns: 1fr 1fr;
+background-color: #705d56;
+color: #ffffff;
+height: 50%;  
+}
+.services .product-services img{
+    width: 100%; 
+}
+.services .product-services p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-indent: 0px;
+    padding: 60px;
+}
+.cleafix-padding{
+    clear: both;
+    margin: 150px; 
+}
+.colors, .colors2, .colors3, .colors4, .colors5{
+    height: 40px;
+    width: 60px;
+    float: left;
+}
+@media screen and (max-width:970px){
+p{
+    padding: 10px 40px;
+}
+
+.services .product-services{
+    display: grid;
+    grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width:576px){
+    p{
+        padding: 10px 20px;
+    }
+    }

@@ -1,0 +1,186 @@
+.header{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    background-color: #32292f;
+  }
+  .header nav{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 0px;
+  }
+  .header .app-logo{
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding:10px;
+    color: #fdf7f4;
+  }
+  .header .mobile-first{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 16px;
+      padding: 10px;
+  }
+  .header .then-desktop li{
+      display: none;
+  }
+  .header li{
+    list-style-type: none;
+    padding: 6px;
+  }
+  .header li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'rock salt', cursive;
+    text-transform: capitalize;
+    color: #fdf7f4;
+  }
+  .header li a:hover{
+      cursor: pointer;
+      border-bottom:2px solid #fdf7f4 ;
+  }
+  .header .fa{
+      font-size:23px;
+     
+      color: #fdf7f4;
+  }
+  .header .fa-bars, .header .fa-times{
+       position: absolute;
+      top: 0;
+      right: 0;
+      margin: 13px;
+  }
+  .header .fa:hover{
+     cursor: pointer;
+  }
+  .header .mobile-first .fa{
+      margin-left:8px ;
+  }
+  .header .nav-list p{
+      color: #e2dfde;
+      font-style: italic;
+      font-size:20px;
+      display: block;
+  }
+  .header .nav-list p:hover{
+      cursor: pointer;
+      font-style: normal;
+      color: honeydew;
+  }
+
+.clearfix-padding{
+    clear: both;
+}
+  main{
+      padding-top: 70px;
+  }
+     .grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:10px;
+    padding: 50px 20px;
+    background-color: #fdf7f4;
+        }
+        .products-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    border-radius: 13px;
+    background-color: #70abaf;
+    transition: 1s;
+        }
+        .products-container:hover{ 
+     transform: scale(0.94);
+    cursor: pointer;
+        }
+        .products-container h2{
+    text-transform: capitalize;
+    font-family: 'rock salt',cursive;
+    margin: 30px 50px 18px 50px;
+    text-align: center;
+        }
+        .products-container img{
+     height: auto; 
+     max-height: 30vh;
+     max-width:100%;
+     min-width:95%;
+        }
+        .products-container ul{  
+     display: block;     
+     margin:20px 30px;
+        }
+        .products-container ul li{
+     font-size: 20px;
+     list-style-type: circle;     
+        }
+    
+        .products-container .buttons-row{
+    display: flex;
+    flex-direction: row;
+    margin: 0 10px 20px 10px;
+        }
+        .products-container .buttons-row .btn{
+    background-color: #99e1d9;
+    padding: 5px 30px ;
+    color:#000;
+    border: none;
+    font-size: 16px;
+    margin: 2px;
+    border-radius: 20px;
+           }
+        .products-container .buttons-row .btn:hover{ 
+            background-color: #000;
+            color: #99e1d9;
+            border-radius: 1px solid #ffffff;
+            cursor: pointer;
+          }
+    
+    @media screen and (max-width:970px){ 
+        .grid-container{
+            grid-template-columns: 1fr 1fr;
+         }
+     }
+    @media screen and (max-width:576px){
+        .grid-container{
+            grid-template-columns: 1fr;
+        
+        }
+    }  
+    
+@media screen and (min-width:700px){
+    .header .mobile-first{
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+    .header .then-desktop{
+        text-align:center;
+       
+    }
+    .header .nav-list{
+         margin: 0 auto;
+        width: 100%;
+    }
+    .header .then-desktop li{
+        display: block;
+        background-color: #32292f;
+    }
+    .header .then-desktop li ul li{
+        display: none;
+    }
+    .header .then-desktop li:hover ul li{
+        display: block;
+    }
+    .header .then-desktop .floater{
+        float: left;
+        width: 150px;
+        line-height: 30px;
+    }
+    .header .fa{
+        display: none;
+    }
+  }

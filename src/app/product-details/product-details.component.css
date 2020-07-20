@@ -1,0 +1,82 @@
+#holder{ /* #100b00 #85cb33 #efffc8  #3b341f */
+    max-width:1200px;
+    margin:0 auto;
+    background-color: #fdf7f4;
+    padding-bottom: 50px;
+    padding-top: 50px;
+     }
+.btn{
+    background-color: #99e1d9;
+    color: #000000;
+    border:none;
+    margin-top: 20px;
+    margin-left: 5%;
+    border-radius: 15px;
+}
+.btn:hover{
+    background-color: #000;
+    color: #99e1d9;
+    cursor: pointer;
+}
+.btn-back{
+padding:2px 16px;
+font-size:18px;
+}
+.btn-book{
+    padding:2px 16px;
+    align-self: flex-end;
+    margin:5px 20px 0 5px;
+}
+.section{
+    background-color: #70abaf;
+    width:90%;
+    margin:0 auto;
+    border-radius:15px;
+    padding-bottom:20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    }
+    section h1{
+        text-transform: capitalize;
+        font-family: 'rock salt',cursive;
+        padding: 10px 50px 8px 50px;
+        text-align: center;
+        border-bottom: 2px solid black;
+    }
+    .grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    }
+    .grid-container img{
+        max-width: 100%;
+        max-height: 80vh;
+        min-width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+    .grid-container .list-container{
+        background-color: #70abaf;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .grid-container ul{
+        max-width: 85%;
+        margin: 0 auto;
+    }
+    .grid-container ul li{
+        color: #000000;
+        font-size: 20px;
+        list-style-type: circle;
+    }
+    @media screen and (max-width:970px){ 
+    .grid-container{
+        grid-template-columns: 1fr;
+        }
+        .grid-container ul{
+            margin:30px 10px;
+        }
+    }

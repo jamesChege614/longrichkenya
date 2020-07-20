@@ -1,0 +1,41 @@
+.color-picker{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+}.one{
+    background-color: #32292f;
+}
+.two{
+    background-color: #99e1d9;
+}
+.three{
+    background-color: #fdf7f4;
+}
+.four{
+    background-color: #705d56;
+}
+.five{
+    background-color: #70abaf;
+}
+.on{
+    background-color: #11151c;
+}
+.tw{
+    background-color: #212d40;
+}
+.thre{
+    background-color: #d66853;
+}
+.fou{
+    background-color: #364156;
+}
+.fiv{
+    background-color: #7d4e57;
+}
+p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
